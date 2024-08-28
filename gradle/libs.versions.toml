@@ -1,0 +1,72 @@
+[versions]
+agentwebCore = "v5.1.1-androidx"
+agp = "8.5.1"
+comGoogleProtobufProtobufKotlinLite = "4.27.3"
+grpcStub = "1.65.1"
+grpcProtobufLite = "1.65.1"
+grpcKotlinStub = "1.4.1"
+grpcOkhttp = "1.65.1"
+grpcNetty = "1.65.1"
+kotlin = "1.9.0"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.6.1"
+activityCompose = "1.8.0"
+composeBom = "2024.04.01"
+appcompat = "1.7.0"
+databindingRuntime = "8.5.1"
+swiperefreshlayout = "1.1.0"
+material = "1.10.0"
+
+
+[libraries]
+agentweb-core = { module = "io.github.justson:agentweb-core", version.ref = "agentwebCore" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+com-google-protobuf-protobuf-kotlin-lite3 = { module = "com.google.protobuf:protobuf-kotlin-lite", version.ref = "comGoogleProtobufProtobufKotlinLite" }
+grpc-android = { module = "io.grpc:grpc-android", version.ref = "grpcStub" }
+grpc-netty = { module = "io.grpc:grpc-netty", version.ref = "grpcNetty" }
+grpc-okhttp = { module = "io.grpc:grpc-okhttp", version.ref = "grpcOkhttp" }
+grpc-kotlin-stub = { module = "io.grpc:grpc-kotlin-stub", version.ref = "grpcKotlinStub" }
+grpc-protobuf-lite = { module = "io.grpc:grpc-protobuf-lite", version.ref = "grpcProtobufLite" }
+grpc-stub = { module = "io.grpc:grpc-stub", version.ref = "grpcStub" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "databindingRuntime" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+
+
+
+grpc-protobuf = { group = "io.grpc", name = "grpc-protobuf", version = "1.62.2" }
+
+protoc = { group = "com.google.protobuf", name = "protoc", version = "3.25.3" }
+protobuf-kotlin = { group = "com.google.protobuf", name = "protobuf-kotlin", version = "3.25.3" }
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "3.25.3" }
+protobuf-java-util = { group = "com.google.protobuf", name = "protobuf-java-util", version = "3.25.3" }
+protoc-gen-grpc-java = { group = "io.grpc", name = "protoc-gen-grpc-java", version = "1.62.2" }
+protoc-gen-grpc-kotlin = { group = "io.grpc", name = "protoc-gen-grpc-kotlin", version = "1.4.1" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+protobuf = { id = "com.google.protobuf", version = "0.9.4" }
+
+
+

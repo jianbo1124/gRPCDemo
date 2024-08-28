@@ -1,0 +1,73 @@
+syntax = "proto3";// 指定proto版本
+package proto;     // 指定默认包名
+
+// 指定golang包名
+option go_package = "./gen";
+
+//定义rpc服务
+service EmployeeService {
+  // 定义函数
+  rpc QueryEmployeeByName(EmployeeParamsRequest)returns (EmployeeResponse){}
+
+  rpc DeleteEmployee(DeleteParamsRequest) returns (DeleteParamsResponse){}
+
+
+  // 定义函数
+  rpc Login(RequestLoginParams)returns (LoginResponse){}
+
+  rpc RegisterUser(UserInfo) returns (RegisterResponse){}
+}
+
+
+message  EmployeeParamsRequest{
+  string name = 1;
+}
+message EmployeeResponse{
+  uint32 code = 1;
+  string message = 2;
+  EmployeeInfo data = 3;
+}
+
+
+message EmployeeInfo{
+  string NAME = 1;
+  string Gender = 2;
+  string Info = 3;
+  string UpdatedAt = 4;
+}
+
+message DeleteParamsRequest{
+  int64 id = 1;
+}
+message DeleteParamsResponse{
+  int32 code = 1;
+  string message = 2;
+
+}
+
+
+message  RequestLoginParams{
+  string name = 1;
+  string password = 2;
+}
+message LoginResponse{
+  uint32 code = 1;
+  string message = 2;
+  UserInfo data = 3;
+}
+
+
+message UserInfo{
+  int32 ID = 1;
+  string Username = 2;
+  string Password = 3;
+  string Email = 4;
+  string Bio = 5;
+}
+
+
+message RegisterResponse{
+  int32 code = 1;
+  string message = 2;
+
+}
